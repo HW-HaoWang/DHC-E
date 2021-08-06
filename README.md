@@ -5,12 +5,12 @@ Many real-world complex systems can be described as graphs. For a large-scale gr
 
 ```
 Important notes:
-The current algorithm is only applicable to `binary` and `undirected` networks.
+The current algorithm is only applicable to binary and undirected networks.
 ```
 
 **How to use the MATLAB code** 
 
-The code is tested under macOS Big Sur 11.5 and MATLAB 2020a.
+The code is tested under `macOS Big Sur 11.5` and `MATLAB_R2021a`.
 Download the `DHC-E` repository from github, then addpath DHC-E to your matlab path.
 
 Run like this:
