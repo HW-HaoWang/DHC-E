@@ -68,7 +68,7 @@ for ig = 1:numGraphs
     elseif size(g,2)==2
         G = graph(g(:,1),g(:,2));
     else
-        error('The inputed file format is nor supported')
+        error('The inputed file format is not supported')
     end
     
     Hn = node_Hindex_centrality(G);
