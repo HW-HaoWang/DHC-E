@@ -37,7 +37,12 @@ function [T] = DHC_E(dataPath, outPath, outName)
 %              The whole graph embedding information for each graph.
 %
 % Example:
-%         [T] = DHC_E('~/Downloads/Project1', '~/Downloads', 'Project1') 
+%         download the DHC-E from github, then addpath DHC-E to your matlab
+%         path.
+%
+%         [path,~,~] = fileparts(which('DHC_E'));
+%         dataPath = fullfile(path,'Binary_BrainSulc_Net');
+%         [T] = DHC_E(dataPath, path, 'BrainEmbedding') 
 %
 %
 % Reference:
