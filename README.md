@@ -20,6 +20,7 @@ dataPath = fullfile(path,'Binary_BrainSulc_Net');
 ```
 
 **How to use the Julia code**
+
 The code is tested under `macOS Big Sur 11.5` and `Julia Version 1.6.2`.
 Download the `DHC-E` repository from github to your local path. 
 Modify your local path according to your situation, if you download DHC-E to /Users/XXX/Downloads/, the file path is /Users/XXX/Downloads/DHC-E '(replace the XXX with your specifical name)'
