@@ -12,9 +12,32 @@ The current algorithm is only applicable to binary and undirected networks.
 The code is tested under `macOS Big Sur 11.5` and `MATLAB_R2021a`.
 Download the `DHC-E` repository from github, then addpath DHC-E to your matlab path.
 
-Run like this:
+Run like this (`Elapsed time is 5.573388 seconds in MATLAB`):
 ```
 [path,~,~] = fileparts(which('DHC_E'));
 dataPath = fullfile(path,'Binary_BrainSulc_Net');
-[T] = DHC_E(dataPath, path, 'BrainEmbedding')
+[T] = DHC_E(dataPath, path, 'BrainEmbedding_Matlab')
+```
+
+**How to use the Julia code**
+The code is tested under `macOS Big Sur 11.5` and `Julia Version 1.6.2`.
+Download the `DHC-E` repository from github to your local path. 
+Modify your local path according to your situation, if you download DHC-E to /Users/XXX/Downloads/, the file path is /Users/XXX/Downloads/DHC-E '(replace the XXX with your specifical name)'
+
+Run like this:
+`The time cost info of Julia is below`
+Range (min … max):  2.256 s …   2.398 s  ┊ GC (min … max): 15.88% … 16.36%
+Time  (median):     2.302 s              ┊ GC (median):    16.07%
+Time  (mean ± σ):   2.319 s ± 72.586 ms  ┊ GC (mean ± σ):  16.11% ±  0.24%
+
+  █                 █                                     █  
+  █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
+  2.26 s         Histogram: frequency by time         2.4 s <
+
+```
+yourPath = "/Users/hao/Downloads/DHC-E" 
+include(joinpath(yourPath, "DHC_E.jl"))
+
+dataPath = joinpath(yourPath, "Binary_BrainSulc_Net")
+DHC_E(dataPath, yourPath, "BrainEmbedding_Julia")
 ```
