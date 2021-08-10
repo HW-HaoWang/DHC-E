@@ -40,7 +40,7 @@ Time  (mean ± σ):   2.319 s ± 72.586 ms  ┊ GC (mean ± σ):  16.11% ±  0.2
 ```
 Run like this:
 ```
-yourPath = "/Users/hao/Downloads/DHC-E" 
+yourPath = "/Users/XXX/Downloads/DHC-E" 
 include(joinpath(yourPath, "DHC_E.jl"))
 
 dataPath = joinpath(yourPath, "Binary_BrainSulc_Net")
