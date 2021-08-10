@@ -112,9 +112,11 @@ function DHC_E(dataPath, outPath, outName)
     df1 = DataFrame(name = allGraph)
     df2 = DataFrame(Embeddings, :auto)
     df = [df1 df2]
-    return df
+    
     cd(outPath)
     CSV.write(outName * ".csv", df)
+
+    return df
 end
 
 

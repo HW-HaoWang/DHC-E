@@ -26,13 +26,17 @@ Modify your local path according to your situation, if you download DHC-E to /Us
 
 Run like this:
 `The time cost info of Julia is below`
+```
 Range (min … max):  2.256 s …   2.398 s  ┊ GC (min … max): 15.88% … 16.36%
 Time  (median):     2.302 s              ┊ GC (median):    16.07%
 Time  (mean ± σ):   2.319 s ± 72.586 ms  ┊ GC (mean ± σ):  16.11% ±  0.24%
 
+
   █                 █                                     █  
   █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
   2.26 s         Histogram: frequency by time         2.4 s <
+
+```
 
 ```
 yourPath = "/Users/hao/Downloads/DHC-E" 
