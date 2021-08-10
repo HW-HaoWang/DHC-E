@@ -1,4 +1,4 @@
-using CSV, DataFrames, LinearAlgebra, LightGraphs, Printf
+using CSV, DataFrames, LinearAlgebra, LightGraphs
 
 function DHC_E(dataPath, outPath, outName)
     #--------------------------------------------------------------------------
@@ -87,7 +87,8 @@ function DHC_E(dataPath, outPath, outName)
         end
 
         EnGraph = push!(EnGraph, tmpEn)
-        @sprintf "Perform the DHC-E for %s is done" allGraph[ig]
+        outList = allGraph[ig]
+        println("Perform the DHC-E for $outList is done")
     end
 
     #
@@ -112,7 +113,7 @@ function DHC_E(dataPath, outPath, outName)
     df1 = DataFrame(name = allGraph)
     df2 = DataFrame(Embeddings, :auto)
     df = [df1 df2]
-    
+
     cd(outPath)
     CSV.write(outName * ".csv", df)
 
