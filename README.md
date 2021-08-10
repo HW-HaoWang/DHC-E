@@ -24,7 +24,7 @@ The code is tested under `macOS Big Sur 11.5` and `Julia Version 1.6.2`.
 Download the `DHC-E` repository from github to your local path. 
 Modify your local path according to your situation, if you download DHC-E to /Users/XXX/Downloads/, the file path is /Users/XXX/Downloads/DHC-E '(replace the XXX with your specifical name)'
 
-Run like this:
+
 `The time cost info of Julia is below`
 ```
 Range (min … max):  2.256 s …   2.398 s  ┊ GC (min … max): 15.88% … 16.36%
@@ -37,7 +37,7 @@ Time  (mean ± σ):   2.319 s ± 72.586 ms  ┊ GC (mean ± σ):  16.11% ±  0.2
   2.26 s         Histogram: frequency by time         2.4 s <
 
 ```
-
+Run like this:
 ```
 yourPath = "/Users/hao/Downloads/DHC-E" 
 include(joinpath(yourPath, "DHC_E.jl"))
