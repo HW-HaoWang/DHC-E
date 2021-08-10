@@ -4,7 +4,6 @@ function DHC_E(dataPath, outPath, outName)
     #--------------------------------------------------------------------------
     # This Julia function is used to calculate Whole Graph Embedding
     #
-    #
     # Inputs:
     #        dataPath:
     #                 The directory that contains a serial of graphs. Note that
@@ -118,7 +117,7 @@ function DHC_E(dataPath, outPath, outName)
 end
 
 
-# subfunctions
+# Subfunctions
 function node_Hindex_centrality(G)
 
     #--------------------------------------------------------------------------
