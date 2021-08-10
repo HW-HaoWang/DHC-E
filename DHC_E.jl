@@ -32,9 +32,6 @@ function DHC_E(dataPath, outPath, outName)
     #     outPath: The directory where the results are stored.
     #     outName: The name of the results' .csv file is stored.
     #
-    # Output:
-    #          T:
-    #              The whole graph embedding information for each graph.
     #
     # Example:
     #          DHC_E('~/Downloads/Project1', '~/Downloads', 'Project1') 
