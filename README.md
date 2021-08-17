@@ -16,7 +16,7 @@ The current algorithm is only applicable to binary and undirected networks.
 The code is tested under `macOS Big Sur 11.5` [MacBook Pro (Retina, 13-inch, Early 2015); Processor 2.7 GHz Dual-Core Intel Core i5] and `MATLAB_R2019a--MATLAB_R2021a`.
 Download the `DHC-E` repository from github, then addpath DHC-E to your matlab path.
 
-Run like this (`Elapsed time is 5.573388 seconds in MATLAB`):
+Run like this (`Elapsed time is 4.077985 seconds in MATLAB`):
 ```
 [path,~,~] = fileparts(which('DHC_E'));
 dataPath = fullfile(path,'Binary_BrainSulc_Net');
@@ -31,15 +31,16 @@ Modify your local path according to your situation, if you download DHC-E to /Us
 
 
 `The time cost info of Julia is below`
+
 ```
-Range (min … max):  2.256 s …   2.398 s  ┊ GC (min … max): 15.88% … 16.36%
-Time  (median):     2.302 s              ┊ GC (median):    16.07%
-Time  (mean ± σ):   2.319 s ± 72.586 ms  ┊ GC (mean ± σ):  16.11% ±  0.24%
+BenchmarkTools.Trial: 3 samples with 1 evaluation.
+ Range (min … max):  2.127 s …    2.410 s  ┊ GC (min … max): 8.07% … 7.56%
+ Time  (median):     2.271 s               ┊ GC (median):    7.62%
+ Time  (mean ± σ):   2.269 s ± 141.540 ms  ┊ GC (mean ± σ):  7.74% ± 0.28%
 
-
-  █                 █                                     █  
-  █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
-  2.26 s         Histogram: frequency by time         2.4 s <
+  █                            █                           █  
+  █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
+  2.13 s         Histogram: frequency by time         2.41 s <
 
 ```
 
