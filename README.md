@@ -31,15 +31,16 @@ Modify your local path according to your situation, if you download DHC-E to /Us
 
 
 `The time cost info of Julia is below`
+
 ```
-Range (min … max):  2.256 s …   2.398 s  ┊ GC (min … max): 15.88% … 16.36%
-Time  (median):     2.302 s              ┊ GC (median):    16.07%
-Time  (mean ± σ):   2.319 s ± 72.586 ms  ┊ GC (mean ± σ):  16.11% ±  0.24%
+BenchmarkTools.Trial: 3 samples with 1 evaluation.
+ Range (min … max):  2.127 s …    2.410 s  ┊ GC (min … max): 8.07% … 7.56%
+ Time  (median):     2.271 s               ┊ GC (median):    7.62%
+ Time  (mean ± σ):   2.269 s ± 141.540 ms  ┊ GC (mean ± σ):  7.74% ± 0.28%
 
-
-  █                 █                                     █  
-  █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
-  2.26 s         Histogram: frequency by time         2.4 s <
+  █                            █                           █  
+  █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
+  2.13 s         Histogram: frequency by time         2.41 s <
 
 ```
 
