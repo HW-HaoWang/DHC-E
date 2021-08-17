@@ -41,8 +41,10 @@ function [T] = DHC_E(dataPath, outPath, outName)
 %
 %
 % Reference:
-% Wang, H., Deng, Y., Lü, L., and Chen, G., (2021), Hyperparameter-free and
-% Explainable Whole Graph Embedding, https://arxiv.org/abs/2108.02113
+%   Wang, H.#, Deng, Y.#, Lü, L., & Chen, G. (2021). 
+%   Hyperparameter-free and Explainable Whole Graph Embedding. arXiv
+%   preprint arXiv:2108.02113
+%   [#] co-first author
 %
 % Hao Wang, UESTC, Chengdu, March 3, 2021, h.wang.psyc(at)gmail.com
 %--------------------------------------------------------------------------
