@@ -13,7 +13,7 @@ The current algorithm is only applicable to binary and undirected networks.
 
 **How to use the MATLAB code** 
 
-The code is tested under `macOS Big Sur 11.5 [MacBook Pro (Retina, 13-inch, Early 2015); Processor 2.7 GHz Dual-Core Intel Core i5]` and `MATLAB_R2021a`.
+The code is tested under `macOS Big Sur 11.5` [MacBook Pro (Retina, 13-inch, Early 2015); Processor 2.7 GHz Dual-Core Intel Core i5] and `MATLAB_R2019a--MATLAB_R2021a`.
 Download the `DHC-E` repository from github, then addpath DHC-E to your matlab path.
 
 Run like this (`Elapsed time is 5.573388 seconds in MATLAB`):
@@ -25,7 +25,7 @@ dataPath = fullfile(path,'Binary_BrainSulc_Net');
 
 **How to use the Julia code**
 
-The code is tested under `macOS Big Sur 11.5 [MacBook Pro (Retina, 13-inch, Early 2015); Processor 2.7 GHz Dual-Core Intel Core i5]` and `Julia Version 1.6.2`.
+The code is tested under `macOS Big Sur 11.5` [MacBook Pro (Retina, 13-inch, Early 2015); Processor 2.7 GHz Dual-Core Intel Core i5] and `Julia Version 1.6.2`.
 Download the `DHC-E` repository from github to your local path. 
 Modify your local path according to your situation, if you download DHC-E to /Users/XXX/Downloads/, the file path is /Users/XXX/Downloads/DHC-E '(replace the XXX with your specifical name)'
 
@@ -42,7 +42,9 @@ Time  (mean ± σ):   2.319 s ± 72.586 ms  ┊ GC (mean ± σ):  16.11% ±  0.2
   2.26 s         Histogram: frequency by time         2.4 s <
 
 ```
+
 Run like this:
+
 ```
 yourPath = "/Users/XXX/Downloads/DHC-E" 
 include(joinpath(yourPath, "DHC_E.jl"))
