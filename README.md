@@ -27,7 +27,7 @@ dataPath = fullfile(path,'Binary_BrainSulc_Net');
 
 The code is tested under `macOS Big Sur 11.5` [MacBook Pro (Retina, 13-inch, Early 2015); Processor 2.7 GHz Dual-Core Intel Core i5] and `Julia Version 1.6.2`.
 Download the `DHC-E` repository from github to your local path. 
-Modify your local path according to your situation, if you download DHC-E to /Users/XXX/Downloads/, the file path is /Users/XXX/Downloads/DHC-E '(replace the XXX with your specifical name)'
+Modify your local path according to your situation, if you download DHC-E to /Users/XXX/Downloads/, the file path is /Users/XXX/Downloads/DHC-E-main '(replace the XXX with your specifical name)'
 
 
 `The time cost info of Julia is below`
@@ -47,7 +47,7 @@ BenchmarkTools.Trial: 3 samples with 1 evaluation.
 Run like this:
 
 ```
-yourPath = "/Users/XXX/Downloads/DHC-E" 
+yourPath = "/Users/XXX/Downloads/DHC-E-main" 
 include(joinpath(yourPath, "DHC_E.jl"))
 
 dataPath = joinpath(yourPath, "Binary_BrainSulc_Net")
