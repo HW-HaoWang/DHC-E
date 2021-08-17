@@ -13,27 +13,27 @@ function DHC_E(dataPath, outPath, outName)
     #                 form of an adjacency matrix or a two-column list,
     #                 including start and end nodes.
     #
-    # e.g., adjacency matrix, 4-node graph
-    #-------------------------------
-    #   : 1 2 3 4
-    # 1 : 0 1 1 0
-    # 2 : 1 0 0 1
-    # 3 : 1 0 0 1
-    # 4 : 0 1 1 0
+    #                 e.g., adjacency matrix, 4-node graph
+    #                 -------------------------------
+    #                    : 1 2 3 4
+    #                  1 : 0 1 1 0
+    #                  2 : 1 0 0 1
+    #                  3 : 1 0 0 1
+    #                  4 : 0 1 1 0
     #
-    # two-column list, 4-node graph
-    #     1  2
-    #     1  3
-    #     2  4
-    #     3  4   
-    #-------------------------------
+    #                 two-column list, 4-node graph
+    #                  1  2
+    #                  1  3
+    #                  2  4
+    #                  3  4   
+    #                 -------------------------------
     #
     #     outPath: The directory where the results are stored.
     #     outName: The name of the results' .csv file is stored.
     #
     #
     # Example:
-    #          DHC_E('~/Downloads/Project1', '~/Downloads', 'Project1') 
+    #          DHC_E("Downloads/Project1", "Downloads", "Project1") 
     #
     #
     # Reference:
@@ -52,7 +52,7 @@ function DHC_E(dataPath, outPath, outName)
     end
 
     numGraphs = size(allGraph, 1)
-    maxDim = zeros(numGraphs, 1)
+    maxDim = zeros(Int32, numGraphs, 1)
     EnGraph = Vector{Matrix{Float64}}()
 
     for ig = 1:numGraphs
@@ -77,7 +77,7 @@ function DHC_E(dataPath, outPath, outName)
 
         Hn = node_Hindex_centrality(G)
         maxDim[ig] = size(Hn, 1)
-        tmpEn = zeros(1, size(Hn, 1))
+        tmpEn = zeros(Float32, 1, size(Hn, 1))
         for ih = 1:size(Hn, 1)
             tmpEn[1, ih] = Entropy_Shannon(Hn[ih, :])
         end
@@ -89,7 +89,7 @@ function DHC_E(dataPath, outPath, outName)
 
     #
     maxDim = Int64(maximum(maxDim))
-    Embeddings = zeros(numGraphs, maxDim)
+    Embeddings = zeros(Float32, numGraphs, maxDim)
     # Aligning the embedding dimension with the entropy of coreness
     for ig = 1:numGraphs
         tmpMat = EnGraph[ig]
@@ -152,22 +152,10 @@ function node_Hindex_centrality(G)
     Nei = G.fadjlist
 
     # Initialize the first-order h-index
-    Hi = zeros(1, numNode)
+    Hn = zeros(Int32, 1, numNode)
+    Hi = zeros(Int32, 1, numNode)
 
-    for iNode = 1:numNode
-        # first-order neighbors for each node
-        index = Nei[iNode, :]
-        # sort neighbour's degree
-        iDegree = TotalDeg[index[1]]
-        iDegree = iDegree[:, :]
-        tmp = sort(iDegree, dims = 1, rev = true)
-        # >=0
-        Hi[iNode] = length(findall(x -> x >= 0, tmp - collect(1:length(tmp))))
-    end
-
-    # Continue loop
-    Hn = zeros(1, numNode)
-    Hn[1, :] = Hi
+    Hn[1, :] = TotalDeg
 
     for inter = 2:numNode
 
@@ -181,6 +169,7 @@ function node_Hindex_centrality(G)
         end
 
         Hn = [Hn; Hi]
+
         if isequal(Hn[end, :], Hn[end-1, :])
             break
         end
@@ -188,8 +177,6 @@ function node_Hindex_centrality(G)
     end
 
     Hn = Hn[1:end-1, :]
-    # add degree back as H0
-    Hn = [TotalDeg'; Hn]
 
 end
 
@@ -198,7 +185,7 @@ function Entropy_Shannon(X)
     # For discrete data
     data = unique(X)
     numData = length(data)
-    Frequency = zeros(1, numData)
+    Frequency = zeros(Int32, 1, numData)
 
     for index = 1:numData
         Frequency[index] = length(findall(x -> x == data[index], X))
