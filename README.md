@@ -34,13 +34,13 @@ Modify your local path according to your situation, if you download DHC-E to /Us
 
 ```
 BenchmarkTools.Trial: 3 samples with 1 evaluation.
- Range (min … max):  2.003 s …   2.097 s  ┊ GC (min … max): 8.38% … 7.97%
- Time  (median):     2.086 s              ┊ GC (median):    8.05%
- Time  (mean ± σ):   2.062 s ± 51.449 ms  ┊ GC (mean ± σ):  8.58% ± 0.72%
+ Range (min … max):  1.782 s …   1.839 s  ┊ GC (min … max): 6.56% … 7.48%
+ Time  (median):     1.816 s              ┊ GC (median):    7.58%
+ Time  (mean ± σ):   1.812 s ± 28.959 ms  ┊ GC (mean ± σ):  7.26% ± 0.62%
 
-  █                                                 █     █  
-  █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁█ ▁
-  2 s            Histogram: frequency by time         2.1 s <
+  █                                █                      █  
+  █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
+  1.78 s         Histogram: frequency by time        1.84 s <
 
 ```
 
