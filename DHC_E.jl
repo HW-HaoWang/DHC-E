@@ -1,6 +1,6 @@
 using CSV, DataFrames, LinearAlgebra, LightGraphs
 
-function DHC_E(dataPath, outPath, outName)
+function DHC_E(dataPath::String, outPath::String, outName::String)
     #--------------------------------------------------------------------------
     # This Julia function is used to calculate Whole Graph Embedding
     #
@@ -53,7 +53,7 @@ function DHC_E(dataPath, outPath, outName)
 
     numGraphs = size(allGraph, 1)
     maxDim = zeros(Int32, numGraphs, 1)
-    EnGraph = Vector{Matrix{Float64}}()
+    EnGraph = Vector{Matrix{Float32}}()
 
     for ig = 1:numGraphs
         g = CSV.File(allGraph[ig], header = 0) |> Tables.matrix
@@ -88,7 +88,7 @@ function DHC_E(dataPath, outPath, outName)
     end
 
     #
-    maxDim = Int64(maximum(maxDim))
+    maxDim = Int32(maximum(maxDim))
     Embeddings = zeros(Float32, numGraphs, maxDim)
     # Aligning the embedding dimension with the entropy of coreness
     for ig = 1:numGraphs
@@ -118,7 +118,7 @@ end
 
 
 # Subfunctions
-function node_Hindex_centrality(G)
+function node_Hindex_centrality(G::SimpleGraph{Int32})
 
     #--------------------------------------------------------------------------
     # This function is used to calculate nodal H-index centrality.
@@ -181,7 +181,7 @@ function node_Hindex_centrality(G)
 end
 
 
-function Entropy_Shannon(X)
+function Entropy_Shannon(X::Vector{Int32})
     # For discrete data
     data = unique(X)
     numData = length(data)
