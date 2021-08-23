@@ -71,7 +71,7 @@ function DHC_E(dataPath, outPath, outName)
                 add_edge!(G, source[iver], destination[iver])
             end
         else
-            error("The inputed file format is nor supported")
+            error("The inputed file format is not supported")
         end
 
 

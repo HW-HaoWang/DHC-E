@@ -74,7 +74,7 @@ for ig = 1:numGraphs
     elseif size(g,2)==2
         G = graph(g(:,1),g(:,2));
     else
-        error('The inputed file format is nor supported')
+        error('The inputed file format is not supported')
     end
     
     Hn = node_Hindex_centrality(G);
@@ -175,9 +175,9 @@ end
 Hn(1,:) = TotalDeg;
 
 for inter = 2:numNode
+    Hitmp = Hn(inter-1,:);
     
     for iNode = 1:numNode
-        Hitmp = Hn(inter-1,:);
         index = Nei{iNode,1};
         tmp = sort(Hitmp(index),'descend');
         Hn(inter,iNode) = sum(tmp>=(1:length(tmp)));
