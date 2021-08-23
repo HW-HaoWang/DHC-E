@@ -13,7 +13,7 @@ The current algorithm is only applicable to binary and undirected networks.
 
 **How to use the MATLAB code** 
 
-The code is tested under `macOS Big Sur 11.5` [MacBook Pro (Retina, 13-inch, Early 2015); Processor 2.7 GHz Dual-Core Intel Core i5] and `MATLAB_R2019a--MATLAB_R2021a`.
+The code is tested under `macOS Big Sur 11.5` [MacBook Pro (Retina, 13-inch, Early 2015); Processor 2.7 GHz Dual-Core Intel Core i5] and `MATLAB_R2018a--MATLAB_R2021a`.
 Download the `DHC-E` repository from github, then addpath DHC-E to your matlab path.
 
 Run like this (`Elapsed time is 4.077985 seconds in MATLAB`):
@@ -27,27 +27,27 @@ dataPath = fullfile(path,'Binary_BrainSulc_Net');
 
 The code is tested under `macOS Big Sur 11.5` [MacBook Pro (Retina, 13-inch, Early 2015); Processor 2.7 GHz Dual-Core Intel Core i5] and `Julia Version 1.6.2`.
 Download the `DHC-E` repository from github to your local path. 
-Modify your local path according to your situation, if you download DHC-E to /Users/XXX/Downloads/, the file path is /Users/XXX/Downloads/DHC-E '(replace the XXX with your specifical name)'
+Modify your local path according to your situation, if you download DHC-E to /Users/XXX/Downloads/, the file path is /Users/XXX/Downloads/DHC-E-main '(replace the XXX with your specifical name)'
 
 
 `The time cost info of Julia is below`
 
 ```
 BenchmarkTools.Trial: 3 samples with 1 evaluation.
- Range (min … max):  2.127 s …    2.410 s  ┊ GC (min … max): 8.07% … 7.56%
- Time  (median):     2.271 s               ┊ GC (median):    7.62%
- Time  (mean ± σ):   2.269 s ± 141.540 ms  ┊ GC (mean ± σ):  7.74% ± 0.28%
+ Range (min … max):  2.003 s …   2.097 s  ┊ GC (min … max): 8.38% … 7.97%
+ Time  (median):     2.086 s              ┊ GC (median):    8.05%
+ Time  (mean ± σ):   2.062 s ± 51.449 ms  ┊ GC (mean ± σ):  8.58% ± 0.72%
 
-  █                            █                           █  
-  █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█ ▁
-  2.13 s         Histogram: frequency by time         2.41 s <
+  █                                                 █     █  
+  █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁█ ▁
+  2 s            Histogram: frequency by time         2.1 s <
 
 ```
 
 Run like this:
 
 ```
-yourPath = "/Users/XXX/Downloads/DHC-E" 
+yourPath = "/Users/XXX/Downloads/DHC-E-main" 
 include(joinpath(yourPath, "DHC_E.jl"))
 
 dataPath = joinpath(yourPath, "Binary_BrainSulc_Net")
