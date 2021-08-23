@@ -158,9 +158,9 @@ function node_Hindex_centrality(G)
     Hn[1, :] = TotalDeg
 
     for inter = 2:numNode
+        Hitmp = Hn[inter-1, :]
 
         for iNode = 1:numNode
-            Hitmp = Hn[inter-1, :]
             index = Nei[iNode, :]
             iDegree = Hitmp[index[1]]
             iDegree = iDegree[:, :]
